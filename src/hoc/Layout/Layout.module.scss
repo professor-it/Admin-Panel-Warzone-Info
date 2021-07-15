@@ -1,0 +1,75 @@
+@import "src/styles/theme";
+
+.Layout {
+	height: 100vh;
+	display: flex;
+	background-color: $COLOR_MAIN;
+	color: $COLOR_TEXT;
+	font-family: $FONT_REGULAR;
+}
+
+.Layout main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: 30px;
+}
+
+.Layout aside {
+	background-color: $COLOR_SECOND;
+	display: flex;
+	flex-direction: column;
+	width: 25%;
+	box-shadow: 5px 0 10px -7px #111;
+}
+.Layout nav {
+	padding: 10px;
+}
+.Layout nav .menu {
+	color: $COLOR_TEXT;
+	background-color: $COLOR_MAIN;
+	border-radius: 10px;
+	cursor: pointer;
+	padding: 10px 15px;
+	letter-spacing: 1px;
+	.menuTitle {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		font-size: 18px;
+	}
+	.menuItems {
+		font-size: 16px;
+		margin-top: 15px;
+		border-left: 2px solid $COLOR_TEXT;
+		.menuItem {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.item {
+				display: block;
+				text-decoration: none;
+				color: $COLOR_GRAY;
+				margin-bottom: 7px;
+				padding-left: 20px;
+				width: 100%;
+				&:hover {
+					color: $COLOR_TEXT;
+				}
+			}
+			.active {
+				color: $COLOR_ADD;
+				&:hover {
+					color: $COLOR_ADD;
+				}
+			}
+			.itemCreate {
+				display: block;
+				text-decoration: none;
+				svg {
+					color: $COLOR_TEXT;
+				}
+			}
+		}
+	}
+}

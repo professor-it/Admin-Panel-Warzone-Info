@@ -1,0 +1,31 @@
+@import "src/styles/theme";
+
+.Card {
+  background-color: $COLOR_SECOND;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Card .CardInfo {}
+.Card .CardButton {
+  .Button {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    span {
+      margin-right: 7px;
+    }
+  }
+  .Change {
+    background-color: darkgreen;
+  }
+  .Del {
+    background-color: darkred;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'open-regular';
+  src: url("../assets/fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: 'open-regularItalic';
+  src: url("../assets/fonts/OpenSans-Italic.ttf");
+}
+@font-face {
+  font-family: 'open-bold';
+  src: url("../assets/fonts/OpenSans-Bold.ttf");
+}
+
+$COLOR_MAIN: #222529;
+$COLOR_SECOND: #2E3137;
+$COLOR_TEXT: #FFFFFF;
+$COLOR_ADD: #FF6F31;
+$COLOR_GRAY: #999999;
+
+$FONT_REGULAR: 'open-regular';
+$FONT_REGULAR_ITALIC: 'open-regularItalic';
+$FONT_BOLD: 'open-bold';
