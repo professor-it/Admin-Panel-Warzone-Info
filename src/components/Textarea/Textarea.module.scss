@@ -1,0 +1,27 @@
+@import "src/styles/theme";
+
+.Textarea {
+  display: block;
+  font-family: $FONT_BOLD;
+  margin-bottom: 30px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.Textarea textarea {
+  font-size: 15px;
+  letter-spacing: 1px;
+  width: 100%;
+  background-color: $COLOR_MAIN;
+  border: 2px solid $COLOR_GRAY;
+  color: $COLOR_TEXT;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 20px;
+  outline: none;
+  resize: none;
+  min-height: 300px;
+  font-family: $FONT_REGULAR;
+}

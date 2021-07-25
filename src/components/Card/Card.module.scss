@@ -1,0 +1,37 @@
+@import 'src/styles/theme';
+
+.Card {
+  background-color: $COLOR_SECOND;
+  padding: 25px 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.Card .CardInfo {
+  .title {
+    font-size: 24px;
+    font-family: $FONT_BOLD;
+    margin: 15px 0 3px;
+  }
+  .desc {
+    font-size: 14px;
+    color: $COLOR_GRAY;
+    font-family: $FONT_REGULAR_ITALIC;
+  }
+  .date {
+    display: inline-block;
+    font-size: 11px;
+    background-color: #318ad4;
+    color: $COLOR_TEXT;
+    padding: 3px 20px;
+    margin-left: -30px;
+    border-radius: 5px;
+    font-family: $FONT_BOLD;
+    box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+.Card .CardButton {
+  margin-left: 10px;
+}

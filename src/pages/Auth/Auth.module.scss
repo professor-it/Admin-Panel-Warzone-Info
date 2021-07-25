@@ -1,0 +1,23 @@
+@import "src/styles/theme";
+
+.Auth {
+  background: $COLOR_MAIN;
+  min-height: 100vh;
+  color: $COLOR_TEXT;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Auth > form {
+  background-color: $COLOR_SECOND;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 50px 1px $COLOR_SECOND;
+  width: 450px;
+}
+.Auth .Error {
+  color: red;
+  margin-top: 25px;
+  font-size: 14px;
+  font-family: $FONT_BOLD;
+}

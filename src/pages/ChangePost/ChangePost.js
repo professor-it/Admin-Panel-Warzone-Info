@@ -1,38 +1,31 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import classes from './Create.module.scss'
+import Loader from 'react-loader-spinner'
+import classes from './ChangePost.module.scss'
 import Input from '../../components/Input/Input'
 import Textarea from '../../components/Textarea/Textarea'
 import Button from '../../components/Button/Button'
 import axios from 'axios'
-import {loadPosts, resetCreate} from '../../store/actions/data'
+import {changePost, changeValuePost, loadPosts, resetCreate} from '../../store/actions/data'
+import {useHistory} from 'react-router-dom'
 
 const Create = () => {
 	const url = window.location.pathname.split('/')
 	const token = useSelector(state => state.auth.token)
 	const create = useSelector(state => state.data.create)
 	const dispatch = useDispatch()
-
+	const history = useHistory()
 
 	React.useEffect(() => {
-		dispatch(resetCreate())
+		dispatch(changeValuePost(url[2]))
 	}, [dispatch])
 
 	const formSubmit = async (e) => {
 		e.preventDefault()
 
-		const formSubmit = {
-			title: create.title.value,
-			desc: create.desc.value,
-			img: create.img.value,
-			text: create.text.value,
-			date: new Date(),
-			rub: url[1]
-		}
+		dispatch(changePost(url[2], create.title.value, create.desc.value, create.img.value, create.text.value, token))
 
-		await axios.post(`https://warzone-info-default-rtdb.europe-west1.firebasedatabase.app/Posts.json?auth=${token}`, formSubmit)
-		dispatch(loadPosts())
-		dispatch(resetCreate())
+		history.push(`/${url[1]}`)
 	}
 
 	return (

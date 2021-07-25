@@ -1,7 +1,7 @@
 @import "src/styles/theme";
 
 .Layout {
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	background-color: $COLOR_MAIN;
 	color: $COLOR_TEXT;
@@ -23,52 +23,52 @@
 	box-shadow: 5px 0 10px -7px #111;
 }
 .Layout nav {
-	padding: 10px;
+
 }
 .Layout nav .menu {
-	color: $COLOR_TEXT;
 	background-color: $COLOR_MAIN;
-	border-radius: 10px;
+	padding: 15px 20px;
+	color: $COLOR_TEXT;
 	cursor: pointer;
-	padding: 10px 15px;
 	letter-spacing: 1px;
-	.menuTitle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 18px;
+	font-family: $FONT_BOLD;
+}
+.Layout nav .menuItems {
+	margin-top: 5px;
+
+	font-size: 16px;
+	font-family: $FONT_BOLD;
+	.menuItem {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		font-size: 18px;
-	}
-	.menuItems {
-		font-size: 16px;
-		margin-top: 15px;
-		border-left: 2px solid $COLOR_TEXT;
-		.menuItem {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			.item {
-				display: block;
-				text-decoration: none;
-				color: $COLOR_GRAY;
-				margin-bottom: 7px;
-				padding-left: 20px;
-				width: 100%;
-				&:hover {
-					color: $COLOR_TEXT;
-				}
+		background-color: $COLOR_MAIN;
+		padding: 0 20px;
+		.item {
+			display: block;
+			padding: 15px 0;
+			text-decoration: none;
+			color: $COLOR_GRAY;
+			width: 100%;
+			&:hover {
+				color: $COLOR_TEXT;
 			}
-			.active {
+		}
+		.active {
+			color: $COLOR_ADD;
+			&:hover {
 				color: $COLOR_ADD;
-				&:hover {
-					color: $COLOR_ADD;
-				}
 			}
-			.itemCreate {
-				display: block;
-				text-decoration: none;
-				svg {
-					color: $COLOR_TEXT;
-				}
+		}
+		.itemCreate {
+			display: flex;
+			text-decoration: none;
+			svg {
+				color: $COLOR_TEXT;
 			}
 		}
 	}

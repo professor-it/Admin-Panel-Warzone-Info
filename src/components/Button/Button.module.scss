@@ -1,0 +1,58 @@
+@import 'src/styles/theme';
+
+.Button {
+  color: $COLOR_TEXT;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 7px 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 13px;
+  border: none;
+  font-family: $FONT_BOLD;
+  &:first-child {
+    margin-bottom: 25px;
+  }
+  .Other {
+    border-right: 2px solid $COLOR_TEXT;
+    padding-right: 8px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    svg {
+      font-size: 20px;
+      transition: .3s;
+    }
+  }
+  .Submit {
+    display: flex;
+    padding-left: 8px;
+    svg {
+      font-size: 20px;
+      transition: .4s;
+    }
+  }
+}
+.Create {
+  font-size: 16px;
+  background-color: #dc5151;
+  padding: 10px 15px;
+  width: auto;
+  margin-left: auto;
+  justify-content: space-between;
+}
+.Change {
+  background-color: $COLOR_CHANGE;
+}
+.Del {
+  background-color: $COLOR_DEL;
+}
+
+.Button:hover .Other svg {
+  transform: translateY(-3px);
+}
+.Button:hover .Submit svg {
+  transform: translateX(5px);
+}
