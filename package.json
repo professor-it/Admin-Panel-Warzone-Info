@@ -25,6 +25,7 @@
     "css-loader": "4.3.0",
     "dotenv": "^8.2.0",
     "dotenv-expand": "5.1.0",
+    "draft-js": "^0.11.7",
     "eslint": "^7.11.0",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-flowtype": "^5.2.0",
@@ -57,6 +58,7 @@
     "react-app-polyfill": "^2.0.0",
     "react-dev-utils": "^11.0.3",
     "react-dom": "^17.0.2",
+    "react-draft-wysiwyg": "^1.14.7",
     "react-loader-spinner": "^4.0.0",
     "react-redux": "^7.2.4",
     "react-refresh": "^0.8.3",
@@ -75,7 +77,8 @@
     "webpack": "4.44.2",
     "webpack-dev-server": "3.11.1",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "5.1.4"
+    "workbox-webpack-plugin": "5.1.4",
+    "yamde": "^1.6.1"
   },
   "scripts": {
     "start": "node scripts/start.js",

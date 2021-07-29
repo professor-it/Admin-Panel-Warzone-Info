@@ -34,6 +34,12 @@ const initialState = {
 			name: 'text'
 		},
 	},
+	textarea: {
+		type: 'textarea',
+		label: 'Статья',
+		value: '',
+		name: 'text'
+	},
 	loading: true
 }
 

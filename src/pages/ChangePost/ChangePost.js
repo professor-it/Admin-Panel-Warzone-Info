@@ -1,11 +1,9 @@
 import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import Loader from 'react-loader-spinner'
 import classes from './ChangePost.module.scss'
 import Input from '../../components/Input/Input'
 import Textarea from '../../components/Textarea/Textarea'
 import Button from '../../components/Button/Button'
-import axios from 'axios'
 import {changePost, changeValuePost, loadPosts, resetCreate} from '../../store/actions/data'
 import {useHistory} from 'react-router-dom'
 
@@ -16,8 +14,8 @@ const Create = () => {
 	const dispatch = useDispatch()
 	const history = useHistory()
 
-	React.useEffect(() => {
-		dispatch(changeValuePost(url[2]))
+	React.useEffect(async () => {
+		await dispatch(changeValuePost(url[2]))
 	}, [dispatch])
 
 	const formSubmit = async (e) => {
@@ -38,11 +36,11 @@ const Create = () => {
 						)
 					} else if (e.type === 'textarea') {
 						return (
-							<Textarea key={index} label={e.label} value={e.value} name={e.name}/>
+							<Textarea key={index} label={e.label} value={e.value} name={e.name} />
 						)
 					}
 				})}
-				<Button style='create' type='submit' button='Отправить'/>
+				<Button style='create' type='submit' button='Сохранить'/>
 			</form>
 		</div>
 	)

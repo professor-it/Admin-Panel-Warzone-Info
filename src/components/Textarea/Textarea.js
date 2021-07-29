@@ -1,17 +1,21 @@
 import React from 'react'
 import classes from './Textarea.module.scss'
-import {changeInput} from '../../store/actions/data'
+import Yamde from 'yamde'
 import {useDispatch} from 'react-redux'
+import {changeInput} from '../../store/actions/data'
 
 const Textarea = ({label, value, name}) => {
+
 	const dispatch = useDispatch()
-	const change = (e) => {
-		dispatch(changeInput(e.target.name, e.target.value))
+
+	const change = e => {
+		dispatch(changeInput('text', e))
 	}
+
 	return (
 		<label className={classes.Textarea}>
 			{label}:
-			<textarea name={name} value={value} onChange={change}/>
+			<Yamde value={value} handler={change} theme="dark" />
 		</label>
 	)
 }

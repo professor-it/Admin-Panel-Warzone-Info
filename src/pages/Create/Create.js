@@ -5,7 +5,9 @@ import Input from '../../components/Input/Input'
 import Textarea from '../../components/Textarea/Textarea'
 import Button from '../../components/Button/Button'
 import axios from 'axios'
-import {loadPosts, resetCreate} from '../../store/actions/data'
+import {changeInput, loadPosts, resetCreate} from '../../store/actions/data'
+import Yamde from 'yamde'
+
 
 const Create = () => {
 	const url = window.location.pathname.split('/')
