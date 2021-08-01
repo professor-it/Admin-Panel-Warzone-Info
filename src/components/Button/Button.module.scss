@@ -36,12 +36,12 @@
   }
 }
 .Create {
-  font-size: 16px;
+  font-size: 15px;
   background-color: #dc5151;
-  padding: 10px 15px;
-  width: auto;
-  margin-left: auto;
-  justify-content: space-between;
+  padding: 7px;
+  width: 100%;
+  justify-content: center;
+  border-radius: 30px;
 }
 .Change {
   background-color: $COLOR_CHANGE;

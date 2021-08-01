@@ -10,14 +10,46 @@
 }
 .Auth > form {
   background-color: $COLOR_SECOND;
-  padding: 40px 60px;
-  border-radius: 20px;
-  box-shadow: 0 0 50px 1px $COLOR_SECOND;
-  width: 450px;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 30px 30px rgba(0,0,0,0.5);
+  width: 350px;
+  min-height: 200px;
 }
+
+.inputBox {
+  position: relative;
+  span {
+    position: absolute;
+    top: 10px;
+    color: #ccc;
+  }
+  input {
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    font-size: 14px;
+    padding-left: 25px;
+    box-sizing: border-box;
+    font-family: $FONT_BOLD;
+  }
+  &:focus {
+    border-bottom: 2px solid #dc5151;
+  }
+  input::placeholder {
+    font-family: $FONT_REGULAR;
+  }
+}
+
 .Auth .Error {
-  color: red;
-  margin-top: 25px;
-  font-size: 14px;
+  color: #dc5151;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
   font-family: $FONT_BOLD;
 }

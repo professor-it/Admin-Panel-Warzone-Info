@@ -8,9 +8,6 @@ const Button = ({style = 'create', button='Отправить', onPress}, props)
 		return (
 			<button type={props.type} className={`${classes.Button} ${classes.Create}`}>
 				{button}
-				<span className={classes.Submit}>
-					<ArrowForwardIos/>
-				</span>
 			</button>
 		)
 	} else if (style === 'change') {

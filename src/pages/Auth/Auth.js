@@ -3,14 +3,21 @@ import classes from './Auth.module.scss'
 import Input from '../../components/Input/Input'
 import {useDispatch, useSelector} from 'react-redux'
 import Button from '../../components/Button/Button'
-import {auth} from '../../store/actions/auth'
+import {auth, changeAuthInput} from '../../store/actions/auth'
 import {Redirect} from 'react-router-dom'
+
+import PersonIcon from '@material-ui/icons/Person';
+import LockIcon from '@material-ui/icons/Lock';
 
 const Auth = () => {
 	const authData = useSelector(state => state.auth.auth)
 	const token = useSelector(state => state.auth.token)
 	const error = useSelector(state => state.auth.error)
 	const dispatch = useDispatch()
+
+	const authChange = (e) => {
+		dispatch(changeAuthInput(e.target.name, e.target.value))
+	}
 
 	const authSubmit = (e) => {
 		e.preventDefault()
@@ -26,10 +33,13 @@ const Auth = () => {
 			<form onSubmit={authSubmit}>
 				{Object.values(authData).map((e, index) => {
 					return (
-						<Input key={index} label={e.label} value={e.value} name={e.name} page='auth' type={e.type}/>
+						<div key={index} className={classes.inputBox}>
+							<span>{e.name === 'email' ? <PersonIcon fontSize='small'/> : <LockIcon fontSize='small'/>}</span>
+							<input name={e.name} type={e.type} value={e.value} onChange={authChange} placeholder={e.name}/>
+						</div>
 					)
 				})}
-				<Button style='create' button='Войти'/>
+				<Button style='create' button='Авторизация'/>
 				{!error
 					? null
 					: <div className={classes.Error}>
